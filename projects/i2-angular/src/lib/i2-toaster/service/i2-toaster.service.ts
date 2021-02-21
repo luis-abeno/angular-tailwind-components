@@ -46,9 +46,9 @@ export class I2ToasterService {
 
     // Wait some time and remove it from the component tree and from the DOM
     // 5 secs it's equal 3 seconds from toaster and 2 seconds to wait animation, then remove from DOM
-    // setTimeout(() => {
-    //   this.appRef.detachView(componentRef.hostView);
-    //   componentRef.destroy();
-    // }, 5000);
+    setTimeout(() => {
+      this.appRef.detachView(componentRef.hostView);
+      componentRef.destroy();
+    }, 5000);
   }
 }
