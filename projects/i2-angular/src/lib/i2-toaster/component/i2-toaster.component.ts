@@ -12,7 +12,7 @@ import {
 @Component({
   selector: 'i2-toaster',
   templateUrl: './i2-toaster.component.html',
-  styleUrls: ['./i2-toaster.component.css'],
+  styleUrls: ['./i2-toaster.component.scss'],
   animations: [
     trigger('openClose', [
       state('open', style({
@@ -39,10 +39,13 @@ export class I2ToasterComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    // Update service position Y, so the next added is going to have a 3 rem from top
     this._toasterService.posY = this._toasterService.posY + 3;
 
+    // Handle toaster provided options
     this.toaster = this._toasterService.toasterOptions;
 
+    // After 3 seconds remove toaster and then update position Y, so the next toaster is attached bellow
     setTimeout(() => {
       this.isOpen = !this.isOpen;
       this._toasterService.posY = this._toasterService.posY - 3;

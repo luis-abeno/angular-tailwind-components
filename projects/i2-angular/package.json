@@ -1,6 +1,10 @@
 {
   "name": "i2-angular",
   "version": "0.0.1",
+  "scripts": {
+    "build-pack": "ng build i2-angular && cd ../../dist/i2-angular && npm pack",
+    "build": "ng build i2-angular"
+  },
   "peerDependencies": {
     "@angular/common": "^11.2.1",
     "@angular/core": "^11.2.1",

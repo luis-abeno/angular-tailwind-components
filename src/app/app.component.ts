@@ -17,7 +17,10 @@ export class AppComponent {
 
   showToast() {
     this._i2Toaster.show(
-      { type: 'info' }
+      {
+        type: 'danger',
+        message: 'Parabéns! Usuário removido com sucesso!'
+      }
     );
   }
 }
