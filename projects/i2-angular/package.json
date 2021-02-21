@@ -1,6 +1,6 @@
 {
   "name": "i2-angular",
-  "version": "0.0.2-alpha",
+  "version": "0.0.1-alpha",
   "scripts": {
     "build-pack": "ng build i2-angular && cd ../../dist/i2-angular && npm pack",
     "build": "ng build i2-angular"
