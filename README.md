@@ -2,8 +2,21 @@
 Description
 
 # Dependencies
+This project depends on Tailwindcss (https://tailwindcss.com/) as peer dependencies.
 
 # About
+
+# How to run
+Just clone the repo and run npm i.  
+It's a workspace that contains the library, the main project is used to test the components.  
+
+To build library run the command bellow inside project/i2-angular folder  
+
+```javascript
+npm run build
+```
+
+After that just serve the main application.  
 
 # Components
 
