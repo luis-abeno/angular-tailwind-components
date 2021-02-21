@@ -7,14 +7,22 @@ Description
 
 # Components
 
-### Toaster
-Import into your module
-`
-import { I2ToasterModule } from 'i2-angular';
-`
+<details><summary>Toaster</summary>
+<p>
 
-Then use in component
-`
+#### Import into your module
+
+```typescript
+import { I2ToasterModule } from 'i2-angular';
+```
+
+</p>
+
+<p>
+
+#### Then use in component
+
+```typescript
 import { I2ToasterService } from 'i2-angular';
 ...
 showToast() {
@@ -25,9 +33,11 @@ showToast() {
       }
     );
   }
-`
+```
+Options  
+Model I2ToasterOptions  
+type (required): 'warning' | 'success' | 'danger' | 'info';  
+message (required): string;  
 
-Options
-Model I2ToasterOptions
-type (required): 'warning' | 'success' | 'danger' | 'info';
-message (required): string;
+</p>
+</details>
