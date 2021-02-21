@@ -34,10 +34,13 @@ showToast() {
     );
   }
 ```
-Options  
-Model I2ToasterOptions  
-type (required): 'warning' | 'success' | 'danger' | 'info';  
-message (required): string;  
+#### Options
+Model: I2ToasterOptions 
+| Property | Required | Values                                 | Default |   |
+|----------|----------|----------------------------------------|---------|---|
+| type     | true     | 'warning', 'success', 'danger', 'info' | success |   |
+| message  | true     | string                                 | ''      |   |
+|          |          |                                        |         |   |
 
 </p>
 </details>
