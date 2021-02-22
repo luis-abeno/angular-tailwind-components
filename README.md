@@ -29,6 +29,12 @@ After that just serve the main application.
 import { I2ToasterModule } from 'i2-angular';
 ```
 
+#### Also some angular modules
+```typescript
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from '@angular/platform-browser';
+```
+
 </p>
 
 <p>
