@@ -55,13 +55,14 @@ showToast() {
 ```
 #### Options
 Model: I2ToasterOptions 
-| Property | Required | Values                                 | Default |   |
-|----------|----------|----------------------------------------|---------|---|
-| type     | true     | 'warning', 'success', 'danger', 'info' | success |   |
-| message  | true     | string                                 | ''      |   |
-|          |          |                                        |         |   |
+| Property | Required | Values                                 |
+|----------|----------|----------------------------------------|
+| type     | true     | 'warning', 'success', 'danger', 'info' |
+| message  | true     | string                                 |
+|          |          |                                        |
 
 </p>
+</details>
 
 <details><summary>Tabs</summary>
 <p>
