@@ -1,6 +1,6 @@
-import { ApplicationRef, ComponentFactoryResolver, Injectable, Injector } from '@angular/core';
+import { ApplicationRef, ComponentFactoryResolver, Inject, Injectable, Injector, ɵComponentType } from '@angular/core';
 import { I2ToasterOptions } from '../model/i2-toaster.model';
-import { I2ToasterComponent } from '../component/i2-toaster.component';
+import { TOASTER_TOKEN } from '../injection-token';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +12,8 @@ export class I2ToasterService {
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
     private appRef: ApplicationRef,
-    private injector: Injector
+    private injector: Injector,
+    @Inject(TOASTER_TOKEN) private I2ToasterComponent: ɵComponentType<any>,
   ) { }
 
   /**
@@ -25,7 +26,7 @@ export class I2ToasterService {
 
     // Create a component reference from the component 
     const componentRef = this.componentFactoryResolver
-      .resolveComponentFactory(I2ToasterComponent)
+      .resolveComponentFactory(this.I2ToasterComponent)
       .create(this.injector);
 
     // Attach component to the appRef so that it's inside the ng component tree

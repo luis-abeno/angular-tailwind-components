@@ -16,7 +16,7 @@ To build library run the command bellow inside project/i2-angular folder
 npm run build
 ```
 
-After that just serve the main application.  
+After that just serve the main application and import modules do you want to test.
 
 # Components
 
@@ -60,6 +60,40 @@ Model: I2ToasterOptions
 | type     | true     | 'warning', 'success', 'danger', 'info' | success |   |
 | message  | true     | string                                 | ''      |   |
 |          |          |                                        |         |   |
+
+</p>
+
+<details><summary>Tabs</summary>
+<p>
+
+#### Import into your module
+
+```typescript
+import { I2TabsModule } from 'i2-angular';
+```
+</p>
+
+<p>
+
+#### Then use in component
+
+```html
+<i2-tabs>
+    <i2-tabs-item [tabTitle]="'Tab 1'">
+        Tab 1 content
+    </i2-tabs-item>
+    <i2-tabs-item tabTitle="Tab 2">
+        Tab 2 content
+    </i2-tabs-item>
+</i2-tabs>
+```
+#### Options
+Model: I2ToasterOptions 
+| Property | Required | Values                                 |
+|----------|----------|----------------------------------------|
+| tabTitle | true     | string                                 |
+| active   | false    | boolean                                |
+|          |          |                                        |
 
 </p>
 </details>
