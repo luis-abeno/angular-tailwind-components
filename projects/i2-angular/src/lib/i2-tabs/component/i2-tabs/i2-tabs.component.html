@@ -1,0 +1,10 @@
+<div class="bg-white">
+    <nav class="flex flex-col sm:flex-row">
+        <button *ngFor="let tab of tabs" (click)="selectTab(tab)"
+            [ngClass]="{'text-blue-500 border-b-2 font-medium border-blue-500': tab.active}"
+            class="text-gray-600 py-4 px-6 block hover:text-blue-500 focus:outline-none">
+            {{tab.title}}
+        </button>
+    </nav>
+</div>
+<ng-content></ng-content>
