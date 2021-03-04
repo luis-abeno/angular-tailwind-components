@@ -4,7 +4,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { I2ToasterModule } from 'i2-angular';
+import { I2ToasterModule, I2TabsModule } from 'i2-angular';
 
 @NgModule({
   declarations: [
@@ -14,7 +14,8 @@ import { I2ToasterModule } from 'i2-angular';
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    I2ToasterModule
+    I2ToasterModule,
+    I2TabsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
