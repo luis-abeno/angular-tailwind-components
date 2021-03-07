@@ -132,6 +132,7 @@ Model: I2ToasterOptions
 | .size    | false    | string                                 |
 | .color   | false    | string                                 |
 | size     | false    | 'lg' | 'md' | 'sm'                     |
+| content  | false    | Component                              |
 
 </p>
 </details>

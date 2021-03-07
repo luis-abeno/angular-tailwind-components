@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { I2ToasterService, I2DrawerService } from 'i2-angular';
+import { TestComponent } from './test.component';
 
 @Component({
   selector: 'app-root',
@@ -31,7 +32,8 @@ export class AppComponent {
         text: 'asd',
         size: 'md',
       },
-      size: 'md'
+      size: 'md',
+      content: TestComponent
     })
   }
 }
