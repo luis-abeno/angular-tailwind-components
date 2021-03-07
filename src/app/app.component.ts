@@ -27,7 +27,10 @@ export class AppComponent {
 
   openDrawer() {
     this._drawerService.show({
-      title: 'My Drawer',
+      title: {
+        text: 'asd',
+        size: 'md',
+      },
       size: 'md'
     })
   }
