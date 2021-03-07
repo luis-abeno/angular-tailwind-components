@@ -4,5 +4,6 @@ export class I2DrawerOptions {
         size?: 'lg' | 'md' | 'sm';
         color?: string;
     };
-    size?: 'lg' | 'md' | 'sm' = 'md'
+    size?: 'lg' | 'md' | 'sm' = 'md';
+    content?: any
 }
