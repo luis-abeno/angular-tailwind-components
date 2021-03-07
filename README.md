@@ -61,7 +61,6 @@ Model: I2ToasterOptions
 |----------|----------|----------------------------------------|
 | type     | true     | 'warning', 'success', 'danger', 'info' |
 | message  | true     | string                                 |
-|          |          |                                        |
 
 </p>
 </details>
@@ -96,7 +95,6 @@ Model: I2ToasterOptions
 |----------|----------|----------------------------------------|
 | tabTitle | true     | string                                 |
 | active   | false    | boolean                                |
-|          |          |                                        |
 
 </p>
 </details>
@@ -129,9 +127,11 @@ this._drawerService.show({
 Model: I2ToasterOptions 
 | Property | Required | Values                                 |
 |----------|----------|----------------------------------------|
-| title    | false    | string                                 |
+| title    | false    | object                                 |
+| .text    | false    | string                                 |
+| .size    | false    | string                                 |
+| .color   | false    | string                                 |
 | size     | false    | 'lg' | 'md' | 'sm'                     |
-|          |          |                                        |
 
 </p>
 </details>

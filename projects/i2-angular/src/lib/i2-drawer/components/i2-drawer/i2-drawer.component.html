@@ -8,8 +8,12 @@
         </svg>
     </div>
 
-    <div class="text-left">
-        <span class="i2-drawer-title">{{ drawer.title }}</span>
+    <div class="text-left" *ngIf="drawer.title">
+        <span class="i2-drawer-title"
+            [ngClass]="{'text-sm': drawer.title!.size === 'sm', 'text-base': drawer.title!.size === 'md', 'text-lg': drawer.title!.size === 'lg'}"
+            [style.color]="drawer.title!.color">
+            {{ drawer.title!.text }}
+        </span>
     </div>
     <ng-content></ng-content>
 </div>
