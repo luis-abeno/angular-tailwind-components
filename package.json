@@ -1,6 +1,6 @@
 {
   "name": "i2-angular-components",
-  "version": "0.0.3-alpha",
+  "version": "0.0.4-alpha",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
