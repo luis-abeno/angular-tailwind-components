@@ -43,7 +43,9 @@ import { BrowserModule } from '@angular/platform-browser';
 
 ```typescript
 import { I2ToasterService } from 'i2-angular';
-...
+
+constructor(private _i2Toaster: I2ToasterService){}
+
 showToast() {
     this._i2Toaster.show(
       {
@@ -94,6 +96,41 @@ Model: I2ToasterOptions
 |----------|----------|----------------------------------------|
 | tabTitle | true     | string                                 |
 | active   | false    | boolean                                |
+|          |          |                                        |
+
+</p>
+</details>
+
+<details><summary>Drawer</summary>
+<p>
+
+#### Import into your module
+
+```typescript
+import { I2DrawerModule } from 'i2-angular';
+```
+</p>
+
+<p>
+
+#### Then use in component
+
+```typescript
+import { I2DrawerService } from 'i2-angular';
+
+constructor(private _drawerService: I2DrawerService){}
+
+this._drawerService.show({
+  title: 'My Drawer',
+  size: 'md'
+})
+```
+#### Options
+Model: I2ToasterOptions 
+| Property | Required | Values                                 |
+|----------|----------|----------------------------------------|
+| title    | false    | string                                 |
+| size     | false    | 'lg' | 'md' | 'sm'                     |
 |          |          |                                        |
 
 </p>

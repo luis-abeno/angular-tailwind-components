@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { I2ToasterService } from 'i2-angular';
+import { I2ToasterService, I2DrawerService } from 'i2-angular';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +10,8 @@ export class AppComponent {
   title = 'i2-angular-components';
 
   constructor(
-    private _i2Toaster: I2ToasterService
+    private _i2Toaster: I2ToasterService,
+    private _drawerService: I2DrawerService
   ) {
 
   }
@@ -22,5 +23,12 @@ export class AppComponent {
         message: 'Parabéns! Usuário removido com sucesso!'
       }
     );
+  }
+
+  openDrawer() {
+    this._drawerService.show({
+      title: 'My Drawer',
+      size: 'md'
+    })
   }
 }
