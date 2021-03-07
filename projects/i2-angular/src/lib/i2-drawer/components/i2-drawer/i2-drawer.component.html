@@ -1,0 +1,19 @@
+<div id="i2-drawer" class="shadow-lg p-4 bg-white fixed z-10 top-0 shadow h-screen right-0" [@slideIn]="slideInState"
+    [ngClass]="{'w-1/4': drawer.size === 'sm', 'w-2/4': drawer.size === 'md', 'w-3/4': drawer.size === 'lg'}">
+    <div class="overflow-auto cursor-pointer" (click)="close()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="float-right"
+            viewBox="0 0 16 16">
+            <path
+                d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" />
+        </svg>
+    </div>
+
+    <div class="text-left" *ngIf="drawer.title">
+        <span class="i2-drawer-title"
+            [ngClass]="{'text-sm': drawer.title!.size === 'sm', 'text-base': drawer.title!.size === 'md', 'text-lg': drawer.title!.size === 'lg'}"
+            [style.color]="drawer.title!.color">
+            {{ drawer.title!.text }}
+        </span>
+    </div>
+    <ng-content></ng-content>
+</div>
