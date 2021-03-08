@@ -21,7 +21,8 @@ export class AppComponent {
     this._i2Toaster.show(
       {
         type: 'danger',
-        message: 'Parabéns! Usuário removido com sucesso!'
+        message: 'Parabéns! Usuário removido com sucesso!',
+        direction: 'bottom-right'
       }
     );
   }

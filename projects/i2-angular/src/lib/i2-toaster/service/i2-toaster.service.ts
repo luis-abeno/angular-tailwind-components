@@ -35,12 +35,26 @@ export class I2ToasterService {
     // Get DOM element from component
     let element: HTMLElement = <HTMLElement>componentRef.location.nativeElement;
 
+    // Set toaster direction
+    let direction: string;
+    switch (options.direction) {
+      case 'top-left': direction = 'left-0 top-0'; break;
+      case 'top-right': direction = 'right-0 top-0'; break;
+      case 'bottom-left': direction = 'left-0 bottom-0'; break;
+      case 'bottom-right': direction = 'right-0 bottom-0'; break;
+      default: direction = 'right-0 top-0'; break;
+    }
+
     // Add some css to component
-    element.classList.value = 'absolute right-0 top-0 m-5';
+    element.classList.value = 'z-50 absolute m-5 ' + direction;
 
     // Pos Y change for each active instance of the component
     // For the first toaster posy = 0, then add by 3 (3 rem) into component
-    element.style.top = this.posY + 'rem';
+    if (options.direction === 'top-left' || options.direction === 'top-right') {
+      element.style.top = this.posY + 'rem';
+    } else {
+      element.style.bottom = this.posY + 'rem';
+    }
 
     // Append DOM element to the body
     document.body.appendChild(element);
