@@ -22,7 +22,7 @@ export class AppComponent {
       {
         type: 'danger',
         message: 'Parabéns! Usuário removido com sucesso!',
-        direction: 'bottom-right'
+        direction: 'top-right'
       }
     );
   }

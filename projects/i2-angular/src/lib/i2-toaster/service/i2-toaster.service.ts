@@ -36,7 +36,7 @@ export class I2ToasterService {
     let element: HTMLElement = <HTMLElement>componentRef.location.nativeElement;
 
     // Set toaster direction
-    let direction: string;
+    let direction: string = 'right-0 top-0';
     switch (options.direction) {
       case 'top-left': direction = 'left-0 top-0'; break;
       case 'top-right': direction = 'right-0 top-0'; break;
